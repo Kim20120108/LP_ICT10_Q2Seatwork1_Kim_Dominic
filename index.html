@@ -1,0 +1,173 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+        <title>Q2 Seatwork 1</title>
+        <style>
+    :root {
+        --bg-color: #ffb6c1; 
+        --card-bg: #2d3748;  
+        --dark-gray: #2d3748; 
+        --text-dark: #1a202c;
+        --text-light: #ffffff;
+        --text-muted: #cbd5e0;
+        --border-color: #e2e8f0;
+        --button-bg: #2067e2;
+        --button-hover: #4a5568;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-dark);
+        font-family: 'Rajdhani', sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem;
+    }
+
+    header {
+        background-color: var(--dark-gray);
+        color: var(--text-light);
+        width: 100%;
+        max-width: 500px;
+        text-align: center;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    header h1 {
+        font-family: 'Orbitron', sans-serif;
+        font-weight: 800;
+        font-size: 2rem;
+        color: var(--text-light);
+        letter-spacing: 1px;
+    }
+
+    header p {
+        font-size: 1rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: 0.5rem;
+    }
+
+    main {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 2.5rem;
+        width: 100%;
+        max-width: 420px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 0.9rem 1rem;
+        background: #f7fafc;
+        border: 1px solid #cbd5e0;
+        border-radius: 6px;
+        color: var(--text-dark);
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 1.1rem;
+        outline: none;
+        transition: border-color 0.2s ease;
+    }
+
+    input[type="text"]:focus {
+        border-color: var(--dark-gray);
+    }
+
+    input[type="button"] {
+        background-color: var(--button-bg);
+        color: var(--text-light);
+        font-family: 'Orbitron', sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        padding: 0.9rem;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: background-color 0.2s ease;
+    }
+
+    input[type="button"]:hover {
+        background-color: var(--button-hover);
+    }
+
+    #result {
+        margin-top: 1.5rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-align: center;
+        min-height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-dark);
+    }
+
+    footer {
+        background-color: var(--dark-gray);
+        color: var(--text-muted);
+        width: 100%;
+        max-width: 500px;
+        font-size: 0.9rem;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 8px;
+        letter-spacing: 1px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    footer span {
+        color: var(--text-light);
+        font-weight: 600;
+    }
+</style>
+    </head>
+    <body>
+        <header>
+            <h1>ICT CLUB CHECKER</h1>
+            <p>Candidate Verification System</p>
+        </header>
+        
+        <main>
+            <form>
+                <input type="text" id="first_name" placeholder="Enter Your First Name"><br>
+                <input type="text" id="last_name" placeholder="Enter Your Last Name"><br>
+                <input type="button" py-click="candidate_checker" value="Enter">
+            </form>
+            <div id="result"></div>
+        </main>
+        <footer>
+            &copy: 2026 <span>Basketball Varsity</span> &bull; Seatwork 1 &bull; 2nd Quarter
+        </footer>
+
+        <py-script src="main.py"> </py-script>
+    </body>
+    </html>
